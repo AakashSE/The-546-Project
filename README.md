@@ -1,9 +1,12 @@
 # 🔴 THE 546 PROJECT
 > **MISSION STATUS: CONCEPTUAL DESIGN // NOT A COMMERCIAL ENTITY**
 
+**[📡 LIVE DEMO UPLINK](https://the-546-project.vercel.app)**
 
+![Banner](./public/assets/banner.png)
 
 ## 📡 CONCEPTUAL OVERVIEW
+**The 546 Project** is an immersive, fictionalized design concept and art project. It serves as a technical demonstration of high-end immersive UI/UX for a speculative future on Mars.
 
 Designed for the first generation of Martian colonists in the year 2050, this platform explores the intersection of brutalist sci-fi aesthetics and advanced web technologies. 
 
