@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* THE CURSOR RULE:
+   We use '*' to target EVERYTHING (buttons, divs, links, inputs).
+   We use '!important' to win the fight against Tailwind.
+*/
+* {
+  cursor: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none;
+}
+
+/* Optional: Selection color to match the luxury theme */
+::selection {
+  background: transparent;
+  color: inherit;
+}
+
+/* A global flash of red that sits behind the transition */
+body {
+  background-color: #C1440E;
+  /* Phobos Red background */
+  overflow-x: hidden;
+}
+
+/* Ensure inputs and textareas are still usable for interaction, even if text within isn't copyable */
+input,
+textarea {
+  user-select: text !important;
+}
+
+/* MARS NEWS TICKER */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@layer utilities {
+  .type-display {
+    @apply font-luxury text-4xl md:text-6xl lg:text-8xl uppercase tracking-tighter leading-none;
+  }
+
+  .type-heading {
+    @apply font-google-sans font-black text-xl md:text-2xl uppercase tracking-[0.2em];
+  }
+
+  .type-body {
+    @apply font-sans text-sm md:text-base leading-relaxed text-white/80;
+  }
+
+  .type-caption {
+    @apply font-courier text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/50;
+  }
+
+  .type-label {
+    @apply font-mono text-[9px] uppercase tracking-widest text-[#C1440E];
+  }
+}
